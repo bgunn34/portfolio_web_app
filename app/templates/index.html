@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Hi, {{ user.username }}!</h1>
+    {% for project in projects %}
+    <div><b>{{ project.title}}: </b> {{ project.date }}</div>
+    <div>{{ project.github }}</div>
+    <br>
+    {% endfor %}
+{% endblock %}
